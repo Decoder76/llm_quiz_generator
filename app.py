@@ -129,11 +129,11 @@ def main():
         question_types = st.multiselect("✍️ Question Types", question_type_options, default=["Multiple Choice"])
         include_explanations = st.radio("💡 Include Explanations?", ("Yes", "No"), index=0)
 
-        st.markdown("--- Optional Parameters ---")
-        sub_topics = st.text_input("🧩 Specific Sub-topics (comma-separated, optional)", placeholder="e.g., lists, dictionaries")
-        context_keywords = st.text_input("🔑 Context Keywords (comma-separated, optional)", placeholder="e.g., syntax, methods")
-        target_audience = st.text_input("👥 Target Audience (optional)", placeholder="e.g., Beginners")
-        max_question_length = st.number_input("📏 Max Words per Question (optional, 0 for no limit)", min_value=0, value=0)
+        with st.expander("⚙️ Optional Parameters"):
+            sub_topics = st.text_input("🧩 Specific Sub-topics (comma-separated)", placeholder="e.g., lists, dictionaries")
+            context_keywords = st.text_input("🔑 Context Keywords (comma-separated)", placeholder="e.g., syntax, methods")
+            target_audience = st.text_input("👥 Target Audience", placeholder="e.g., Beginners")
+            max_question_length = st.number_input("📏 Max Words per Question", min_value=0, value=0)
         
         submitted = st.form_submit_button("🚀 Generate Quiz")
 
@@ -159,13 +159,13 @@ def main():
                 "max_question_length": max_question_length if max_question_length > 0 else None
             }
 
-            st.success("Parameters collected! Generating quiz...")
+            st.success("✅ Parameters collected! Generating quiz...")
             # st.json(quiz_params) # Can hide this later
 
             # --- Call LLM and Display Raw Output ---
             raw_llm_output = generate_quiz_with_llm(quiz_params, llm)
             
-            st.subheader("🤖 Raw LLM Output:")
+            st.subheader("🤖 Generated Quiz:")
             st.markdown("```text\n" + raw_llm_output + "\n```") # Display as a text block
 
             # Next step will be to parse this raw_llm_output
