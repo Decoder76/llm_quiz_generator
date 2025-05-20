@@ -1,8 +1,10 @@
-````markdown
 # 📚 LLM Quiz Generator
 
 **Generate customized quizzes on any topic using powerful Large Language Models (LLMs) with just a few clicks!**  
 A minimal, intuitive web app powered by Hugging Face and built with Streamlit.
+
+![Python](https://img.shields.io/badge/python-3.8%2B-blue)
+![Streamlit](https://img.shields.io/badge/streamlit-%E2%9C%85-green)
 
 ---
 
@@ -130,16 +132,4 @@ For support, suggestions, or contributions, feel free to:
 > ✨ Whether you're a teacher, developer, or student, this app lets you **generate smart quizzes in seconds**.
 > Happy learning!
 
-````
-
----
-
-### Next steps to make it shine on GitHub:
-
-- Add badges at the top, for example:
-
-```markdown
-![Python](https://img.shields.io/badge/python-3.8%2B-blue)
-![Streamlit](https://img.shields.io/badge/streamlit-%E2%9C%85-green)
-![License](https://img.shields.io/github/license/Decoder76/llm_quiz_generator)
 ````
