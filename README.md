@@ -113,13 +113,6 @@ Open the provided local URL (typically `http://localhost:8501`) in your browser.
 
 ---
 
-## 📄 License
-
-**MIT License** – Free to use, modify, and contribute!
-See [LICENSE](./LICENSE) for more details.
-
----
-
 ## 🙋‍♂️ Contact & Feedback
 
 For support, suggestions, or contributions, feel free to:
